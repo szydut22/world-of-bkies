@@ -1,0 +1,1 @@
+import './competitionItem.html';

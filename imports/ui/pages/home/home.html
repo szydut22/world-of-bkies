@@ -1,4 +1,38 @@
-<template name="App_home">
-  {{> hello}}
-  {{> info}}
+<template name="Home_page">
+    {{> navbar}}
+    {{> slider}}
+   
+
+    <div class="w-container">
+      <div>
+        <h1 class="heading-19">Dla zawodników</h1>
+      </div>
+      <div class="w-row">
+        <div class="w-col w-col-4">
+
+          <div>
+            <img
+              src="/img/add-people.png"
+              width="167" alt="" class="image-9">
+          </div>
+
+          <div class="div-block-7">
+            <a href="/login" class="button-3 w-button">Rejestracja</a>
+          </div>
+        </div>
+
+        <div class="w-col w-col-4">
+          <div>
+            <img src="/img/line-chart.png"
+              width="95" alt="" class="image-10"></div>
+          <div class="div-block-5"><a href="/ranking" class="button-3 w-button">Ranking zawodników</a></div>
+        </div>
+        <div class="w-col w-col-4">
+          <div><img src="/img/question.png"
+              alt="" class="image-12"></div>
+          <div class="div-block-6"><a href="/competition" class="button-3 w-button">Zawody</a></div>
+        </div>
+      </div>
+    </div>
+    {{> footer}}
 </template>

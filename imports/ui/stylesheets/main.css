@@ -1233,7 +1233,6 @@
    
    .image-3 {
      display: inline-block;
-     padding: 10px;
      margin-top: 0px;
      border: 3px solid grey;
      border-radius: 70px;
@@ -1512,7 +1511,7 @@
    }
    
    .heading-16 {
-     margin-top: 8px;
+     margin-top: 15px;
      margin-left: 30px;
      font-size: 20px;
    }
@@ -2159,12 +2158,11 @@
    }
    
    .heading-20 {
-    font-size: 20px;
-    margin-top: 48px;
-    margin-left: 30px;
-    padding-top: 0px;
-    padding-left: 0px;
-    margin-bottom: 0px;
+     margin-top: 15px;
+     margin-bottom: -200px;
+     margin-left: 30px;
+     padding-bottom: 0px;
+     font-size: 20px;
    }
    
    .image-13 {
@@ -2193,8 +2191,11 @@
      padding-right: 10px;
      padding-left: 10px;
      float: right;
+     clear: none;
      border-radius: 13px;
-     background-color: grey;
+     background-color: #fff;
+     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(124, 16, 16, 0.5)), to(rgba(124, 16, 16, 0.5)));
+     background-image: linear-gradient(180deg, rgba(124, 16, 16, 0.5), rgba(124, 16, 16, 0.5));
      font-size: 17px;
    }
    
@@ -2208,14 +2209,13 @@
      margin-right: 168px;
      margin-left: -130px;
      float: right;
-     border-radius: 13px;
-     background-color: grey;
-     font-size: 17px;
+     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(201, 10, 10, 0.5)), to(rgba(201, 10, 10, 0.5)));
+     background-image: linear-gradient(180deg, rgba(201, 10, 10, 0.5), rgba(201, 10, 10, 0.5));
+     text-transform: uppercase;
    }
    
    .div-block-8 {
      float: right;
-     color: #fff;
    }
    
    .link-block-2 {
@@ -2721,31 +2721,31 @@
    
    .field-label-8 {
      margin-bottom: 0px;
-     margin-left: 48vh;
    }
    
    .field-label-9 {
-     margin-left: 18.5vh;
+     margin-left: -100px;
    }
    
    .field-label-10 {
-     margin-left: 26vh;
+     margin-right: -100px;
    }
    
    .field-label-11 {
-     margin-left: 22.5vh;
+     margin-right: -100px;
    }
    
    .field-label-12 {
-     margin-left: 14.5vh;
+     margin-right: 0px;
+     margin-left: -100px;
    }
    
    .field-label-13 {
-    margin-left: 18vh;
+     margin-left: -100px;
    }
    
    .field-label-14 {
-     margin-left: 23.5vh;
+     margin-right: -100px;
    }
    
    .submit-button-5 {
