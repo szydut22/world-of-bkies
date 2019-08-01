@@ -17,10 +17,12 @@
                 </iframe>
               </div>
   
-              <a href="/" class="navigation-item w-nav-link w--current">Home</a>
-              <a href="/competition" class="navigation-item w-nav-link">Zawody</a>
-              <a href="/ranking" class="navigation-item w-nav-link">Ranking</a>
-              <a href="/login" class="navigation-item w-nav-link">Logowanie</a>
+              <a href="/" class="navigation-item w-nav-link {{#if homeSelected}}w--current{{/if}}">Home</a>
+              <a href="/competition" class="navigation-item w-nav-link {{#if competitionSelected}}w--current{{/if}}">Zawody</a>
+              <a href="/ranking" class="navigation-item w-nav-link {{#if rankingSelected}}w--current{{/if}}">Ranking</a>
+              <a href="/login" class="navigation-item w-nav-link {{#if loginSelected}}w--current{{/if}}">Logowanie</a>
+ 
+              
             </nav>
   
             <div class="menu-button w-nav-button">

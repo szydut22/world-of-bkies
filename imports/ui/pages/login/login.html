@@ -1,12 +1,12 @@
 <template name="login">
-    {{> navbar}}
+    {{> navbar loginSelected=true}}
     
     <div class="section">
         <div class="styleguide-header-wrap">
             <div class="heading-jumbo">Logowanie/Rejestracja</div>
         </div>
         <div class="container">
-            <div class="styleguide-content-wrap">
+            <div class="styleguide-content-wrap">       
                 <div class="container-2 w-container">
                     <div class="columns w-row">
                         {{> signInForm}}
