@@ -1,25 +1,40 @@
 <template name="slider">
-  <div class="div-block-4">
+  <div class="div-block-4">    
     <div data-animation="slide" data-duration="500" data-infinite="1" class="slider-2 w-slider">
-      <div class="w-slider-mask">
-        <div class="slide w-slide" style="transform: translateX(0px); opacity: 1; transition: transform 500ms ease 0s;">
-          <img src="/img/bicycle-slider1.jpg"
-            height="1000" width="1275"
-            sizes="100vw" alt="" class="image-7"></div>
-        <div class="w-slide" style="transform: translateX(0px); opacity: 1; transition: transform 500ms ease 0s;"><img
-            src="/img/bicycle-slider2.jpg"
-            sizes="100vw" alt="" class="image-8"></div>
+      <div class="w-slider-mask">        
+          <div class="slide w-slide" style="{{#if isSelected 0 }}display: block {{else}}display: none {{/if}}">
+            <img src="/img/bicycle-slider1.jpg" height="1000" width="1275" sizes="100vw" alt="" class="image-7">
+          </div>
+          
+          <div class="slide w-slide" style="{{#if isSelected  1 }}display: block {{else}}display: none {{/if}}">
+              <img src="/img/bicycle-slider2.jpg" sizes="100vw" alt="" class="image-8">
+          </div>
+
+          <div class="slide w-slide" style="{{#if isSelected  2 }}display: block {{else}}display: none {{/if}}">
+            <img src="/img/bicycle-photo1.jpg" sizes="100vw" alt="" class="image-8">
+          </div> 
+          
+          <div class="slide w-slide" style="{{#if isSelected  3 }}display: block {{else}}display: none {{/if}}">
+            <img src="/img/bicycle-photo2.jpg" sizes="100vw" alt="" class="image-8">
+          </div> 
+
       </div>
+     
       <div class="w-slider-arrow-left">
-        <div class="w-icon-slider-left">{{sliderhandler}}</div>
+        <div class="w-icon-slider-left"></div>
       </div>
+      
       <div class="w-slider-arrow-right">
         <div class="w-icon-slider-right"></div>
       </div>
+      
       <div class="w-slider-nav w-round">
-        <div class="w-slider-dot w-active" data-wf-ignore=""></div>
-        <div class="w-slider-dot" data-wf-ignore=""></div>
+        <div class="w-slider-dot {{#if isSelected  0 }} w-active {{/if}}" data-wf-ignore="" data-slide-no="0"></div>
+        <div class="w-slider-dot {{#if isSelected  1 }} w-active {{/if}}" data-wf-ignore="" data-slide-no="1"></div>
+        <div class="w-slider-dot {{#if isSelected  2 }} w-active {{/if}}" data-wf-ignore="" data-slide-no="2"></div>
+        <div class="w-slider-dot {{#if isSelected  3 }} w-active {{/if}}" data-wf-ignore="" data-slide-no="3"></div>
       </div>
+
     </div>
   </div>
 </template>
