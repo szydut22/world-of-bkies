@@ -1,23 +1,24 @@
 <template name="Competition">
     {{> navbar competitionSelected=true}}
+    
     <div class="titleofpage w-clearfix">
         <h1 class="heading-3">Zawody </h1>
     </div>
+    
     <div class="w-container">
         <div class="w-layout-grid grid-2">
-            {{> competitionItem}}
-            {{> competitionItem}}
-            {{> competitionItem}}
-            {{> competitionItem}}
-            {{> competitionItem}}
-            {{> competitionItem}}
-            {{> competitionItem}}
-            {{> competitionItem}}
-            </div>
-    </div>
-    <div class="container-7 w-container"><a href="/creating-competition" class="link-block-2 w-inline-block"><img
-                src="/img/add-competition.png"
-                width="52" alt=""></a></div>
-                
-            {{> footer}}
+            {{#each competitions}}
+                {{> competitionItem town=town date=date description=description id=_id}}
+            {{/each}}
+        </div>
+    </div>            
+
+    <div class="container-7 w-container">        
+        <img src="{{#if isOpen }}/img/minus.png{{else}}/img/add-competition.png{{/if}}" width="52" alt="" id="openForm">
+    </div>  
+    
+    <div style="{{#if isOpen }}display: block {{else}}display: none {{/if}}">
+        {{> creatingCompetitionForm}}
+    </div> 
+    {{> footer}}
 </template>

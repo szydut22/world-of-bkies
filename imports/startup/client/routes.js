@@ -10,6 +10,7 @@ import '../../ui/pages/login/login.js';
 import '../../ui/pages/competitionPlace/competitionPlace.js';
 import '../../ui/pages/profile/profile.js';
 import '../../ui/pages/not-found/not-found.js';
+import '../../ui/pages/creating-competition/creating-competition.js';
 
 // Set up all routes in the app
 FlowRouter.route('/', {
@@ -40,7 +41,7 @@ FlowRouter.route('/login', {
   },
 });
 
-FlowRouter.route('/competitionplace', {
+FlowRouter.route('/competitionplace/:id', {
   name: 'CompetitionPlace',
   action() {
     BlazeLayout.render('App_body', { main: 'competitionPlace' });
@@ -54,8 +55,17 @@ FlowRouter.route('/profile', {
   },
 });
 
+FlowRouter.route('/creating-competition', {
+  name: 'CreatingCompetition',
+  action() {
+    BlazeLayout.render('App_body', { main: 'creatingCompetition' });
+  },
+});
+
 FlowRouter.notFound = {
   action() {
     BlazeLayout.render('App_body', { main: 'App_notFound' });
   },
 };
+
+

@@ -1,25 +1,22 @@
 <template name="signInForm">
-        <div class="column-1 w-col w-col-6 w-col-medium-6 w-col-small-6 w-col-tiny-6">
-                <div>
-                    <h1 class="logowanie">Zaloguj się</h1>
-                </div>
-                <div class="w-form">
-                    <form id="email-form" name="email-form" data-name="Email Form" method="get"
-                        redirect="https://szymons-sublime-project.webflow.io/work/project-1"
-                        data-redirect="https://szymons-sublime-project.webflow.io/work/project-1"
-                        class="form"><label for="Email-6" class="field-label">adres email</label><input
-                            type="email" class="text-field-3 w-input" maxlength="256" name="Email-6"
-                            data-name="Email 6" id="Email-6" required=""><label for="Password-2"
-                            class="field-label-2">hasło</label><input type="password"
-                            class="text-field-4 w-input" maxlength="256" name="Password-2"
-                            data-name="Password 2" data-ix="new-interaction" id="Password-2" required=""><a
-                            href="/profile" class="w-button">Zaloguj się</a></form>
-                    <div class="w-form-done">
-                        <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div class="w-form-fail">
-                        <div>Oops! Something went wrong while submitting the form.</div>
-                    </div>
-                </div>
+    <div class="column-1 w-col w-col-6 w-col-medium-6 w-col-small-6 w-col-tiny-6">
+        <div>
+            <h1 class="logowanie">Zaloguj się</h1>
+        </div>
+        <div class="w-form">
+            <form id="email-form" name="email-form" data-name="Email Form" method="get" redirect="https://szymons-sublime-project.webflow.io/work/project-1" data-redirect="https://szymons-sublime-project.webflow.io/work/project-1" class="form">
+                <label class="field-label">adres email</label>
+                    <input type="email" class="text-field-3 w-input" maxlength="256" id="Email-7" name="email" required="">
+                <label for="Password-2" class="field-label-2">hasło</label>
+                    <input type="password" class="text-field-4 w-input" maxlength="256" data-ix="new-interaction" id="Password-2" name="password" required="">
+                    <input type="button" value="Zaloguj się" class="w-button" id="submit-form2">
+            </form>
+            <div class="w-form-done">
+                <div>Thank you! Your submission has been received!</div>
             </div>
+            <div class="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form.</div>
+            </div>
+        </div>
+    </div>
 </template>

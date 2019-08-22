@@ -16,13 +16,15 @@
                   style="border: none; overflow: hidden; width: 110px; height: 21px;">
                 </iframe>
               </div>
-  
               <a href="/" class="navigation-item w-nav-link {{#if homeSelected}}w--current{{/if}}">Home</a>
               <a href="/competition" class="navigation-item w-nav-link {{#if competitionSelected}}w--current{{/if}}">Zawody</a>
               <a href="/ranking" class="navigation-item w-nav-link {{#if rankingSelected}}w--current{{/if}}">Ranking</a>
-              <a href="/login" class="navigation-item w-nav-link {{#if loginSelected}}w--current{{/if}}">Logowanie</a>
- 
-              
+              <div class="dropdown">
+                <button class="dropbtn"><a href="{{#if isLoggedIn}}/profile{{else}}/login{{/if}}" class="navigation-item w-nav-link {{#if loginSelected}}w--current{{/if}}">{{#if isLoggedIn}}{{currentUser}}{{else}}Logowanie{{/if}}</a></button>
+                <div class="dropdown-content">
+                  <a href="/login" id="logout-form">{{#if isLoggedIn}}wyloguj się{{else}}{{/if}}</a>
+                </div>
+              </div>            
             </nav>
   
             <div class="menu-button w-nav-button">

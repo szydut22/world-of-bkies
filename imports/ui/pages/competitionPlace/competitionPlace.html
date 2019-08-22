@@ -1,7 +1,7 @@
 <template name="competitionPlace">
     {{> navbar}}
         <div class="titleofpage">
-            <h1 class="heading-3">Zawody Kraków</h1>
+            <h1 class="heading-3">Zawody {{document.town}}</h1>
         </div>
         <div class="w-container">
             <div class="div-block-8 w-clearfix">
@@ -13,7 +13,7 @@
                         src="/img/calendar.png"
                         width="70" alt="" class="image-13"></div>
                 <div class="w-col w-col-11">
-                    <h1 class="heading-20">zawody zaczynają się 29.08.2019</h1>
+                    <h1 class="heading-20">zawody zaczynają się {{document.date}}</h1>
                 </div>
             </div>
             <div class="cloumns-1 w-row">
@@ -21,7 +21,7 @@
                         src="/img/home-button.png"
                         width="55" alt="" class="image-5"></div>
                 <div class="w-col w-col-11">
-                    <h1 class="heading-12">zawody zaczynają się na ulicy ...........................</h1>
+                    <h1 class="heading-12">zawody zaczynają się na ulicy {{document.start}}</h1>
                 </div>
             </div>
             <div class="cloumns-2 w-row">
@@ -29,7 +29,15 @@
                         src="/img/checkered-flag.png"
                         width="56" alt="" class="image-4"></div>
                 <div class="column-8 w-col w-col-11">
-                    <h1 class="heading-14">Zawody kończą się na ulicy ..................</h1>
+                    <h1 class="heading-14">Zawody kończą się na ulicy {{document.meta}}</h1>
+                </div>
+            </div>
+            <div class="columns-4 w-row">
+                <div class="w-col w-col-1"><img
+                        src="/img/hill.png"
+                        width="56" alt="" class="image-4"></div>
+                <div class="w-col w-col-11">
+                    <h1 class="heading-16">Długość trasy to {{document.routeProfile}}</h1>
                 </div>
             </div>
             <div class="columns-3 w-row">
@@ -37,21 +45,12 @@
                         src="/img/start-and-finish.png"
                         width="56" alt="" class="image-6"></div>
                 <div class="w-col w-col-11">
-                    <h1 class="heading-16">Długość trasy to ..........</h1>
+                    <h1 class="heading-16">Długość trasy to {{document.routeLength}}</h1>
                 </div>
             </div>
             <div class="rich-text-block w-richtext">
                 <h2>Opis</h2>
-                <p>The rich text element allows you to create and format headings, paragraphs, blockquotes, images, and
-                    video all in one place instead of having to add and format them individually. Just double-click and
-                    easily create content.</p>
-                <h4>Static and dynamic content editing</h4>
-                <p>A rich text element can be used with static or dynamic content. For static content, just drop it into
-                    any page and begin editing. For dynamic content, add a rich text field to any collection and then
-                    connect a rich text element to that field in the settings panel. Voila!</p>
-                <h4>How to customize formatting for each rich text</h4>
-                <p>Headings, paragraphs, blockquotes, figures, images, and figure captions can all be styled after a
-                    class is added to the rich text element using the "When inside of" nested selector system.</p>
+                <p>{{document.description}}</p>
             </div>
             <div class="columns-6 w-row">
                 <div class="column-9 w-col w-col-2">

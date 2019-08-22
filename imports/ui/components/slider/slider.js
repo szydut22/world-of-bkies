@@ -19,7 +19,7 @@ Template.slider.helpers({
             return false;
         }
     }
-})
+});
 
 Template.slider.events({
     'click .w-slider-arrow-right'(event){
