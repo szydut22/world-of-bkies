@@ -1,6 +1,20 @@
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
 import { Competitions } from './competitions';
+import { StartingNumber} from './startingNumber';
+
+const doAutoincrement = function(collection, callback) {
+    collection.rawCollection().findAndModify(
+        { _id: "startingNumber"}, 
+        [], 
+        {  $inc: {currentStartingNumber: 1}}, 
+        { 'new': true}, 
+        callback);
+  }
+
+  const nextAutoincrement = function(collection) {
+    return Meteor.wrapAsync(doAutoincrement)(collection);
+  }
 
 Meteor.methods({
     'competitions.insert'(town, date, description, start, meta, routeLength, routeProfile){
@@ -23,4 +37,11 @@ Meteor.methods({
             routeProfile:routeProfile
         });
     },
+
+    'profile.getStartingNumber'(){        
+        var current = nextAutoincrement(StartingNumber);
+        var startingNumber = current.value.currentStartingNumber;
+        return startingNumber;
+        
+    }
 })

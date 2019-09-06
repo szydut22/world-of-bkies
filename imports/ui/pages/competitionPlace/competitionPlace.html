@@ -5,8 +5,8 @@
         </div>
         <div class="w-container">
             <div class="div-block-8 w-clearfix">
-                <h1 class="heading-21">Nie zapisałeś się jeszcze na zawody, zrób to teraz</h1><a href="#"
-                    class="button-6 w-button">Zapisz się</a>
+                <h1 class="heading-21" style="{{#if isLoggedIn}}display: block{{else}}display: none{{/if}}">Nie zapisałeś się jeszcze na zawody, zrób to teraz</h1>
+                <a href="/" style="{{#if isLoggedIn}}display: block{{else}}display: none{{/if}}" class="button-6 w-button" >Zapisz się</a>
             </div>
             <div class="columns-5 w-row">
                 <div class="w-col w-col-1"><img

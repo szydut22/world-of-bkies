@@ -13,6 +13,6 @@ Template.profile.helpers({
             var profile = Meteor.user();   
             return profile;
         }
-    }
-
+    },
+    
 });

@@ -28,7 +28,7 @@ Template.navbar.helpers({
 Template.navbar.events({
     'click #logout-form'(events){
         Meteor.logout((Error)=>{
-                console.log("Zalozylem");
+                console.log("wylogowany");
                 console.log(Error);
             })
         }
